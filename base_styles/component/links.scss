@@ -1,0 +1,13 @@
+@mixin links($standard){
+	
+}
+
+
+// Add Variables for large screen styles
+@media screen and (max-width: $mainbreak) {
+	@include links($mobile_unit);
+}
+// Add variables for mobile screen styles
+@media screen and (min-width: $mainbreak) {
+	@include links($standard_unit);
+}

@@ -1,0 +1,37 @@
+@mixin button($standard) {
+    .btn {
+        border: 2px solid $gray-medium-light;
+        height: calc(#{$standard}*3);
+        color: $brand;
+        text-transform: lowercase;
+        display: flex;
+        align-items: center;
+        padding: 0 2em;
+        position: relative;
+        font-weight: 700;
+        font-size: 1em;
+        @include transition(all 0.4s);
+        &:hover {
+            text-decoration: none;
+            color: white;
+            background-color: $brand;
+            border-color: white;
+        }
+        &.-alternate {
+            &:after {
+            }
+            &:before {
+            }
+        }
+    }
+}
+
+// Add Variables for large screen styles
+@media screen and (max-width: $mainbreak) {
+    @include button($mobile_unit);
+}
+
+// Add variables for mobile screen styles
+@media screen and (min-width: $mainbreak) {
+    @include button($standard_unit);
+}

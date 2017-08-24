@@ -1,0 +1,21 @@
+@mixin content-sections($standard) {
+	body > section{
+		&.-generic{
+			.container{
+
+			}
+			.inner{
+			}
+		}
+	}
+}
+
+// Add Variables for mobile screen styles
+@media screen and (max-width: $mainbreak) {
+	@include content-sections($mobile_unit);
+}
+
+// Add variables for large screen styles
+@media screen and (min-width: $mainbreak) {
+	@include content-sections($standard_unit);
+}

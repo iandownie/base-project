@@ -1,0 +1,16 @@
+@mixin grid($standard){
+	.grid{
+		.item{
+		}
+	}
+}
+
+
+// Add Variables for large screen styles
+@media screen and (max-width: $mainbreak) {
+	@include grid($mobile_unit);
+}
+// Add variables for mobile screen styles
+@media screen and (min-width: $mainbreak) {
+	@include grid($standard_unit);
+}

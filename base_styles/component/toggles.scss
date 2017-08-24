@@ -1,0 +1,13 @@
+@mixin toggle($standard) {
+    .toggle-parent {}
+}
+
+// Add Variables for large screen styles
+@media screen and (max-width: $mainbreak) {
+    @include toggle($mobile_unit);
+}
+
+// Add variables for mobile screen styles
+@media screen and (min-width: $mainbreak) {
+    @include toggle($standard_unit);
+}

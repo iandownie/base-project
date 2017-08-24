@@ -1,0 +1,16 @@
+@mixin header($standard){
+	header.-main{
+	}
+	.menu{
+	}
+}
+
+
+// Add Variables for large screen styles
+@media screen and (max-width: $mainbreak) {
+	@include header($mobile_unit);
+}
+// Add variables for mobile screen styles
+@media screen and (min-width: $mainbreak) {
+	@include header($standard_unit);
+}

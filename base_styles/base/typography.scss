@@ -1,0 +1,126 @@
+/**
+ *  Typography
+ */
+
+body,
+input,
+textarea,
+.text,
+p {
+    font-family: $standard_text
+    font-weight: 400;
+}
+
+p,
+.text {
+    @extend %smooth;
+    color: $text;
+    line-height: 1.6em;
+    font-size: 16px;
+    font-family: $standard_text
+    margin-bottom: 0.5em;
+    &:last-of-type{
+        margin-bottom: 0;
+    }
+}
+
+.text {
+    padding-bottom: 1em;
+}
+
+strong, b, .bold {
+    font-weight: 700;
+}
+
+em,
+i {
+    font-style: italic;
+}
+
+ul,
+ol {
+    font-family: $standard_text
+    ul, ol{
+        margin-left: 0;
+    }
+}
+
+ul {
+    list-style: none;
+    li {
+        color: $text;
+        padding: 0 0 0 1rem;
+        font-size: 0.8em;
+        position:relative;
+        &:before{
+            content: '';
+            @include position(absolute, 0.7em, 0em);
+            @include square(5px);
+            background: #702082;
+        }
+        li:before{
+            top: 0.8em;
+        }
+    }
+}
+
+blockquote {
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $gray-dark;
+    line-height: 1.2;
+    font-family: $standard_text
+    font-weight: 700;
+}
+
+h1,
+.-main-heading {
+     font-size: 2.4em;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+h3{
+
+}
+h4 {
+    
+}
+
+h5 {
+    
+}
+
+a {
+    color: $brand;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 600;
+    &:hover {
+        text-decoration: none;
+        color: $gray-dark;
+    }
+}
+
+.thin {
+    font-weight: 100;
+}
+
+
+/**
+ *  Mobile typography
+ */
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+}

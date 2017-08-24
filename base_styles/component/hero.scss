@@ -1,0 +1,11 @@
+@mixin hero($standard) {}
+
+// Add Variables for large screen styles
+@media screen and (max-width: $mainbreak) {
+    @include hero($mobile_unit);
+}
+
+// Add variables for mobile screen styles
+@media screen and (min-width: $mainbreak) {
+    @include hero($standard_unit);
+}

@@ -1,0 +1,39 @@
+@include standardcss();
+
+@mixin generic($standard) {
+	html {
+		&.menu-toggler-parent.active {
+			overflow-y: hidden;
+		}
+	}
+	body {
+		position: relative;
+		> section {
+		}
+		.width {
+			margin-left: auto;
+			margin-right: auto;
+			&.-standard {
+				width: calc((2/3)*100*#{$standard});
+				max-width: 80vw;
+			}
+			&.-large {
+				width: calc(100% - 22*#{$standard});
+				max-width: 90vw;
+			}
+			&.-full-width {
+				width: 100%;
+			}
+		}
+	}
+}
+
+// Add Variables for large screen styles
+@media screen and (max-width: $mainbreak) {
+	@include generic($mobile_unit);
+}
+
+// Add variables for mobile screen styles
+@media screen and (min-width: $mainbreak) {
+	@include generic($standard_unit);
+}

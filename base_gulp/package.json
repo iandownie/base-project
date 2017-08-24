@@ -1,0 +1,24 @@
+{
+    "name": "njimedia2017",
+    "version": "1.0.0",
+    "main": "Gulpfile.js",
+    "scripts": {
+        "gulp": "gulp"
+    },
+    "author": "Web_Point",
+    "devDependencies": {
+        "browser-sync": "^2.18.7",
+        "gulp": "^3.9.1",
+        "gulp-sass": "^2.2.0",
+        "gulp-notify": "^2.2.0",
+        "gulp-rename": "^1.2.0",
+        "gulp-sourcemaps": "^1.6.0",
+        "gulp-util": "^3.0.3",
+        "webpack": "^1.12.12",
+        "angular": "^1.6.5",
+        "angular-route": "^1.6.5"
+    },
+    "dependencies": {
+        "angular-sanitize": "^1.6.5"
+    }
+}
